@@ -5,17 +5,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import web.dao.CarDao;
+import web.Service.CarService;
 
 @Controller
 @RequestMapping("/cars")
 public class CarController {
 
 
-    private CarDao carDao;
+    private CarService carDao;
 
-    public CarController(CarDao carDao) {
+    public CarController(CarService carDao) {
         this.carDao = carDao;
+    }
+
+    @GetMapping("")
+    public String getCarList(Model model) {
+
+        model.addAttribute("car", carDao.getCarList());
+        return "cars";
+
     }
 
     @GetMapping(value = "/{index}")

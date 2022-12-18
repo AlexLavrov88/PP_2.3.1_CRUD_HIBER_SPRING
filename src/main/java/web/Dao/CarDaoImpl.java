@@ -1,4 +1,4 @@
-package web.service;
+package web.Dao;
 
 import org.springframework.stereotype.Component;
 import web.model.Car;
@@ -6,7 +6,7 @@ import web.model.Car;
 import java.util.ArrayList;
 import java.util.List;
 @Component
-public class CarServiceImpl implements CarService{
+public class CarDaoImpl implements CarDao {
    private List<Car> carList;
     {
         carList = new ArrayList<>();
