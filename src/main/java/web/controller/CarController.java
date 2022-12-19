@@ -30,6 +30,5 @@ public class CarController {
     public String getCarId(@PathVariable("index") int index, Model model) {
         model.addAttribute("car", carDao.getCarById(index));
         return "cars";
-
     }
 }
