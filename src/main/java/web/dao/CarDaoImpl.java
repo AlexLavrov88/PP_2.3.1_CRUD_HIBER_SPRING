@@ -1,4 +1,4 @@
-package web.Dao;
+package web.dao;
 
 import org.springframework.stereotype.Component;
 import web.model.Car;
@@ -14,7 +14,10 @@ public class CarDaoImpl implements CarDao {
         carList.add(new Car("Lada", "Sedan", "Bacladjan"));
         carList.add(new Car("Porshe", "911", "Yellow"));
         carList.add(new Car("Honda", "Accord", "Black"));
-        carList.add(new Car("Audi", "A4", "Grey"));
+        carList.add(new Car("Audi1", "A4", "Grey"));
+        carList.add(new Car("Audi2", "A4", "Grey"));
+        carList.add(new Car("Audi3", "A4", "Grey"));
+        carList.add(new Car("Audi4", "A4", "Grey"));
     }
     @Override
     public List<Car> getCarList() {
