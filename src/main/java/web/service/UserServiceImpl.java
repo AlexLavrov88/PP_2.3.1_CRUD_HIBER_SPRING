@@ -9,10 +9,11 @@ import web.dao.UserDao;
 import web.dao.UserDaoImpl;
 
 import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    UserDao dao;
+    private UserDao dao;
 
     @Override
     public List<User> getUserList() {
